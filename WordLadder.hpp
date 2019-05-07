@@ -4,6 +4,7 @@
 #include<queue>
 #include<vector>
 #include<string>
+using std::string;
 
 class WordLadder
 {

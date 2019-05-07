@@ -23,12 +23,12 @@ void WordLadder::readLexicon(string input_file){
 			std::getline(lexicon_file, word, '\n');
 			lexicon.push_back(word);
 		}
-		/*
+		
 		for (int i = 0; i < lexicon.size(); i++)
 		{
-			std::cout << lexicon[i];
+			std::cout << lexicon[i] << std::endl;
 		}
-		*/
+		
 }
 
 std::vector<string> WordLadder::findShortestLadder(string start_word, string end_word){
