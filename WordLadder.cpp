@@ -23,7 +23,8 @@ void WordLadder::readLexicon(string input_file){
 			std::getline(lexicon_file, word, '\n');
 			lexicon.push_back(word);
 		}
-		
+		//for debugging purposes only
+		//delete when submitting to gradescope
 		for (int i = 0; i < lexicon.size(); i++)
 		{
 			std::cout << lexicon[i] << std::endl;
