@@ -8,6 +8,10 @@
 int main(){
 	WordLadder object;
 	object.readLexicon("4LetterWordsReduced.dat");
+	object.findShortestLadder("this", "that");
+	std::cout << std::endl;
+
+	object.findShortestLadder("ford", "lost");
 
 	return 0;
 }

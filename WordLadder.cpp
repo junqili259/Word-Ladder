@@ -36,30 +36,20 @@ void WordLadder::readLexicon(string input_file){
 //checks if the word was used before or not
 bool WordLadder::checkUsed(string new_word)
 {
-	//if empty then new word isn't used
-	if(used_words.empty())
+	if (used_words.empty())
 	{
 		return true;
 	}
-	
 	else
-	{
 		//checking new_word and words in used_words character by character
 		for (int i = 0; i < used_words.size(); i++)
 		{
-			string usedword = used_words[i];
-			for (int j = 0; j < usedword.size(); j++)
+			if (new_word != used_words[i])//if different words, then new_world is not used yet and return true
 			{
-				//if different words, then new_world is not used yet and return true
-				if (usedword[j] != new_word[j])
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
-	}
-	
 }
 
 //return a vector containing shortest path from start_word to end_word
@@ -100,9 +90,7 @@ std::vector<string> WordLadder::findShortestLadder(string start_word, string end
 					ladders.push(ladder_copy);//insert new ladder into queue
 				}
 			}
-			
 		}
-		
 	}
 	//if no ladder exist
 	std::vector<string> v;
