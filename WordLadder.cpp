@@ -29,7 +29,8 @@ void WordLadder::readLexicon(string input_file){
 		while(!lexicon_file.eof()){
 			std::getline(lexicon_file, word);
 			lexicon.push_back(word);//insert word into lexicon 
-		}	
+		}
+		lexicon_file.close();//close input_file after finished reading
 }
 
 //return true if not used, false otherwise
@@ -64,7 +65,7 @@ std::vector<string> WordLadder::findShortestLadder(string start_word, string end
 	while (!ladders.empty())
 	{
 		std::vector<string> first_ladder = ladders.front();//current ladder, oldest in queue
-		string last_word = first_ladder[first_ladder.size() - 1];//last element in current ladder
+		string last_word = first_ladder.back();//last element in current ladder and assign to last_word
 		ladders.pop();//dequeue the ladder
 
 		//if end_word is found at end of current ladder
