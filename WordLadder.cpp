@@ -1,9 +1,3 @@
-/*
-Jun Qi Li
-CSCI 235
-Project 5
-Finding the shortest word ladder
-*/
 #include"WordLadder.hpp"
 #include<queue>
 #include<vector>
