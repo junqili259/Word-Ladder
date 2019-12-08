@@ -1,8 +1,3 @@
-/*
-Jun Qi Li
-CSCI 235
-hpp file for WordLadder class
-*/
 #ifndef WORD_LADDER_HPP
 #define WORD_LADDER_HPP
 
